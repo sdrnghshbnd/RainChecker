@@ -18,6 +18,6 @@ public class WeatherScheduler {
     // Run every day at 8:30 AM
     @Scheduled(cron = "0 30 08 * * ?", zone = "Europe/London")
     public void checkWeatherAndSendEmail() {
-        mailService.sendWeatherAlert(weatherService.isRainExpectedInNext12Hours(),"sample@gmail.com","sample@gmail.com");
+        mailService.sendWeatherAlert(weatherService.isRainExpectedInNext12Hours(), "sample@gmail.com", "sample@gmail.com");
     }
 }
